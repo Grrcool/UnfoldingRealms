@@ -6,12 +6,12 @@ public class FallingPhysics : MonoBehaviour
 {
     //use kinematic instead of gravity to add gravity to blocks.
     //iskinematic = true; etc
-    private Rigidbody rb;
+    public Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb.useGravity = false;
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -20,8 +20,9 @@ public class FallingPhysics : MonoBehaviour
         
     }
 
-    private void OnMouseDown()
-    {
-        rb.useGravity=true;
+    void OnMouseDown()
+    {  
+      rb.isKinematic = false;
+      GetComponent<Rigidbody>().useGravity = true;
     }
 }
