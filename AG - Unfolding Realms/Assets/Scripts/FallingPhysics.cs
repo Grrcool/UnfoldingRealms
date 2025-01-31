@@ -24,5 +24,6 @@ public class FallingPhysics : MonoBehaviour
     {  
       rb.isKinematic = false;
       GetComponent<Rigidbody>().useGravity = true;
+        GameObject.FindObjectOfType<NextLevel>().droppedCubes += 1;
     }
 }
