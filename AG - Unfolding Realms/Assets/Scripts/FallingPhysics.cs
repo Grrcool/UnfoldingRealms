@@ -7,7 +7,7 @@ public class FallingPhysics : MonoBehaviour
     //use kinematic instead of gravity to add gravity to blocks.
     //iskinematic = true; etc
     public Rigidbody rb;
-
+    public bool mainMenu = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +21,25 @@ public class FallingPhysics : MonoBehaviour
     }
 
     void OnMouseDown()
-    {  
-      rb.isKinematic = false;
-      GetComponent<Rigidbody>().useGravity = true;
-        GameObject.FindObjectOfType<NextLevel>().droppedCubes += 1;
+    {
+        if (mainMenu == false)
+        {
+            rb.isKinematic = false;
+            GetComponent<Rigidbody>().useGravity = true;
+            GameObject.FindObjectOfType<NextLevel>().droppedCubes += 1;
+        }
+    }
+
+    public void Mainmenu ()
+    {
+        GetComponent<Rigidbody>().isKinematic = false;
+        GetComponent<Rigidbody>().useGravity = true;
+        mainMenu = true;
+        StartCoroutine(SelfDestruct());
+    }
+    IEnumerator SelfDestruct()
+    {
+        yield return new WaitForSeconds(4.5f);
+        Destroy(gameObject);
     }
 }
