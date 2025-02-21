@@ -5,16 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject OptionPanel;
+    public GameObject MenuPanel;
+    public GameObject Spawner;
+
+    public void Options(GameObject OpenPanel)
     {
-        
+       
+            OpenPanel.SetActive(true);
+            MenuPanel.SetActive(false);
+            Spawner.GetComponent<BlockSpawning>().OnMain = false;
+    
     }
 
-    // Update is called once per frame
-    void Update()
+    public void BackButton (GameObject Panel)
     {
-        
+            Panel.SetActive(false);
+            MenuPanel.SetActive(true);
+            Spawner.GetComponent<BlockSpawning>().OnMain = true;
     }
 
     // Goes to scene Room1
@@ -22,4 +30,6 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("Room1");
     }
+
+    
 }

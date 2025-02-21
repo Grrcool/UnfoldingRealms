@@ -5,7 +5,7 @@ using UnityEngine;
 public class BlockSpawning : MonoBehaviour
 {
     public GameObject BlackCube;
-
+    public bool OnMain = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,8 +15,11 @@ public class BlockSpawning : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 spawnPos = new Vector3(Random.Range(17.6f, 100.9f), 50.54f, -7.58f);
-        GameObject temp = Instantiate(BlackCube, spawnPos, Quaternion.identity);
-        temp.GetComponent<FallingPhysics>().Mainmenu();
+        if (OnMain == true)
+        {
+            Vector3 spawnPos = new Vector3(Random.Range(17.6f, 100.9f), 50.54f, -7.58f);
+            GameObject temp = Instantiate(BlackCube, spawnPos, Quaternion.identity);
+            temp.GetComponent<FallingPhysics>().Mainmenu();
+        }
     }
 }
