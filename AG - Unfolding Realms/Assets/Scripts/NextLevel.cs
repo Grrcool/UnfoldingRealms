@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class NextLevel : MonoBehaviour
 {
     public int droppedCubes;
+
     // Start is called before the first frame update
     void Start()
     {

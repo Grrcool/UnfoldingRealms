@@ -30,6 +30,9 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("Room1");
     }
-
     
+    public void QuitGame()
+    {
+        Application.Quit();
+    }    
 }
