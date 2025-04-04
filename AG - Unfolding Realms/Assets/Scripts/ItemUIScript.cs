@@ -1,17 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ItemUIScript : MonoBehaviour
 {
-    public Image oldImage;
-    public Sprite newImage;
-
+    UIManager UIManager;
+    public Sprite myImaga;
     // Start is called before the first frame update
     void Start()
     {
-        
+       UIManager = FindObjectOfType<UIManager>();
     }
 
     // Update is called once per frame
@@ -20,8 +20,10 @@ public class ItemUIScript : MonoBehaviour
         
     }
 
-    void ImageChange()
+    void OnMouseDown()
     {
-        oldImage.sprite = newImage;
+        gameObject.SetActive(false);
+        //holdItem = this; (needs UIManager Done)
     }
+
 }

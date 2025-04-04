@@ -17,7 +17,7 @@ public class BlockSpawning : MonoBehaviour
     {
         if (OnMain == true)
         {
-            Vector3 spawnPos = new Vector3(Random.Range(17.6f, 100.9f), 50.54f, -7.58f);
+            Vector3 spawnPos = new Vector3(Random.Range(25f, 105f), 50.54f, -7.58f);
             GameObject temp = Instantiate(BlackCube, spawnPos, Quaternion.identity);
             temp.GetComponent<FallingPhysics>().Mainmenu();
         }
