@@ -1,3 +1,4 @@
+using Palmmedia.ReportGenerator.Core.Parser.Analysis;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,10 +6,11 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     public ItemUIScript item;
+    public GameObject fan;
     // Start is called before the first frame update
     void Start()
     {
-        
+        fan = GameObject.Find("Metro Fan");
     }
 
     // Update is called once per frame
@@ -25,7 +27,7 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-            //Set other item active
+            fan.SetActive(true);
             item = iScript;
         }
     }
