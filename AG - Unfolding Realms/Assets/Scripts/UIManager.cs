@@ -7,10 +7,13 @@ public class UIManager : MonoBehaviour
 {
     public ItemUIScript item;
     public GameObject fan;
+    public GameObject Hammer;
+
     // Start is called before the first frame update
     void Start()
     {
         fan = GameObject.Find("Metro Fan");
+        Hammer = GameObject.Find("hammer");
     }
 
     // Update is called once per frame
@@ -28,6 +31,7 @@ public class UIManager : MonoBehaviour
         else
         {
             fan.SetActive(true);
+            //Hammer.SetActive(false); why is fan.setactive true?
             item = iScript;
         }
     }

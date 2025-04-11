@@ -13,6 +13,7 @@ public class ItemUIScript : MonoBehaviour
     void Start()
     {
        UIManager = FindObjectOfType<UIManager>();
+       
     }
 
     // Update is called once per frame
@@ -26,5 +27,4 @@ public class ItemUIScript : MonoBehaviour
         gameObject.SetActive(false);
         //holdItem = this; (needs UIManager Done)
     }
-
 }

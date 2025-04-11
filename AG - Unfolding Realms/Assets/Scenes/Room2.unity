@@ -358,6 +358,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 0}
   fan: {fileID: 1397451678957268, guid: 768003408b1c8644881fd8e548bc60f6, type: 3}
+--- !u!1 &259264229 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1397451678957268, guid: 768003408b1c8644881fd8e548bc60f6, type: 3}
+  m_PrefabInstance: {fileID: 2060342785}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &259264235
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259264229}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5980179, y: 2.5020792, z: 2.2520516}
+  m_Center: {x: -0.0000011622906, y: 1.2510418, z: 0}
 --- !u!1001 &284441235
 PrefabInstance:
   m_ObjectHideFlags: 0
