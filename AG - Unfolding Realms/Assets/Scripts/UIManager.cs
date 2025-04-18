@@ -2,18 +2,17 @@ using Palmmedia.ReportGenerator.Core.Parser.Analysis;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     public ItemUIScript item;
-    public GameObject fan;
-    public GameObject Hammer;
+    public Image icon;
 
     // Start is called before the first frame update
     void Start()
     {
-        fan = GameObject.Find("Metro Fan");
-        Hammer = GameObject.Find("hammer");
+        
     }
 
     // Update is called once per frame
@@ -27,12 +26,14 @@ public class UIManager : MonoBehaviour
         if(item == null)
         {
             item = iScript;
+            icon.sprite = iScript.myImaga;
         }
         else
         {
-            fan.SetActive(true);
+            item.Reset();
             //Hammer.SetActive(false); why is fan.setactive true?
             item = iScript;
+            icon.sprite = iScript.myImaga;
         }
     }
 }

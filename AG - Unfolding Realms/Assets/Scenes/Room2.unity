@@ -357,7 +357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  fan: {fileID: 1397451678957268, guid: 768003408b1c8644881fd8e548bc60f6, type: 3}
+  icon: {fileID: 931521415}
 --- !u!1 &259264229 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1397451678957268, guid: 768003408b1c8644881fd8e548bc60f6, type: 3}
@@ -376,6 +376,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5980179, y: 2.5020792, z: 2.2520516}
   m_Center: {x: -0.0000011622906, y: 1.2510418, z: 0}
+--- !u!114 &259264240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259264229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2e17000c5cc4ba4e92f26ea50885f95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myImaga: {fileID: 21300000, guid: fac8846d0e7bfbf47a462ff7a1e26f89, type: 3}
 --- !u!1001 &284441235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -442,6 +455,14 @@ PrefabInstance:
     - target: {fileID: 4848899773351372, guid: 20ffe5c18928a4c4594e9261db2333af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104346178847296008, guid: 20ffe5c18928a4c4594e9261db2333af, type: 3}
+      propertyPath: m_Name
+      value: Lamp Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104346178847296008, guid: 20ffe5c18928a4c4594e9261db2333af, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20ffe5c18928a4c4594e9261db2333af, type: 3}
@@ -765,6 +786,29 @@ Transform:
   m_Father: {fileID: 552041732}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
+--- !u!1 &989157324 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1644476406946372, guid: 20ffe5c18928a4c4594e9261db2333af, type: 3}
+  m_PrefabInstance: {fileID: 284441235}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &989157328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989157324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e9a39e326480de489af867222571c2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LtLamp: {fileID: 1441956594}
+--- !u!1 &1441956594 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4104346178847296008, guid: 20ffe5c18928a4c4594e9261db2333af, type: 3}
+  m_PrefabInstance: {fileID: 284441235}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1561769249
 GameObject:
   m_ObjectHideFlags: 0
@@ -1253,7 +1297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2e17000c5cc4ba4e92f26ea50885f95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myImaga: {fileID: 0}
+  myImaga: {fileID: 21300000, guid: 7c5e81dc8941ae84d87ca34c8a4476ed, type: 3}
 --- !u!1 &2030464485
 GameObject:
   m_ObjectHideFlags: 0

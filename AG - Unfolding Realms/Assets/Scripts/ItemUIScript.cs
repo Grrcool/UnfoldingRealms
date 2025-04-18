@@ -7,13 +7,14 @@ using UnityEngine.UI;
 public class ItemUIScript : MonoBehaviour
 {
     UIManager UIManager;
+    HammerAtk HammerAtk;
     public Sprite myImaga;
 
     // Start is called before the first frame update
     void Start()
     {
        UIManager = FindObjectOfType<UIManager>();
-       
+       HammerAtk = FindObjectOfType<HammerAtk>();
     }
 
     // Update is called once per frame
@@ -25,6 +26,11 @@ public class ItemUIScript : MonoBehaviour
     void OnMouseDown()
     {
         gameObject.SetActive(false);
-        //holdItem = this; (needs UIManager Done)
+        UIManager.Inventory(this);
+        
+    }
+    public void Reset()
+    {
+        gameObject.SetActive(true);
     }
 }
