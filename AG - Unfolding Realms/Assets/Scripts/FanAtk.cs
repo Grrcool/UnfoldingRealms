@@ -2,30 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HammerAtk : MonoBehaviour
+public class FanAtk : MonoBehaviour
 {
-    public GameObject LtLamp;
-    public GameObject Cubey;
-
     // Start is called before the first frame update
     void Start()
     {
-        LtLamp = GameObject.Find("Lamp Light");
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
     void OnMouseDown()
     {
-        if(FindObjectOfType<UIManager>().item.gameObject.name == "hammer") 
+        if (FindObjectOfType<UIManager>().item.gameObject.name == "Metro Fan")
         {
-            Destroy(LtLamp);
-            Cubey.SetActive(true);
             FindObjectOfType<UIManager>().LightOut += 1;
+            Destroy(gameObject);
         }
     }
 }
-    

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4848899773351372}
   - component: {fileID: 33275895817236260}
   - component: {fileID: 23142687742629640}
+  - component: {fileID: 5645345432163036201}
   m_Layer: 0
   m_Name: Old_USSR_Lamp_01
   m_TagString: Untagged
@@ -84,6 +85,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5645345432163036201
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644476406946372}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.26442704, y: 0.42533195, z: 0.38291705}
+  m_Center: {x: 0.0018797426, y: 0.21266598, z: 0.061123498}
 --- !u!1 &4104346178847296008
 GameObject:
   m_ObjectHideFlags: 0
