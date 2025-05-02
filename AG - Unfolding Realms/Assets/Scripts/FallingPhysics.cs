@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FallingPhysics : MonoBehaviour
 {
@@ -28,6 +29,13 @@ public class FallingPhysics : MonoBehaviour
             GetComponent<Rigidbody>().useGravity = true;
             GameObject.FindObjectOfType<NextLevel>().droppedCubes += 1;
         }
+      
+    }
+
+    public void GravityActive()
+    {
+        rb.isKinematic = false;
+        GetComponent<Rigidbody>().useGravity = true;
     }
 
     public void Mainmenu ()

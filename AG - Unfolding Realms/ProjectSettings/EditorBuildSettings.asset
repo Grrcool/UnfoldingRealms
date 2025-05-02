@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FadingEffect.unity
     guid: 059f37a1ff03658488d2ea8a0651f1b3
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: f016f45e112c312458b4d388b6301728
   m_configObjects: {}

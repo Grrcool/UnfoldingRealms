@@ -22,8 +22,15 @@ public class UIManager : MonoBehaviour
     {
         if (LightOut >= 9)
         {
-            SceneManager.LoadScene("Room3");
-            Debug.Log("Game Is Over");
+            if(SceneManager.GetActiveScene().buildIndex == 3)
+            {
+                SceneManager.LoadScene("Ending");
+            } else
+            {
+                SceneManager.LoadScene("Room3");
+                Debug.Log("Game Is Over");
+            }
+       
         }
     }
 
