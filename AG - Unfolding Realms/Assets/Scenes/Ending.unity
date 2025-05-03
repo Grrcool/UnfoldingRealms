@@ -439,6 +439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BlackCube: {fileID: 3987430631612957942, guid: 91dadcccd839a1e40887f6a7535b0598, type: 3}
   OnMain: 0
+  rb: {fileID: 0}
 --- !u!65 &1016936040
 BoxCollider:
   m_ObjectHideFlags: 0
