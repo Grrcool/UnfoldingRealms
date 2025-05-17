@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class FanAtk : MonoBehaviour
 {
+    public AudioSource wind;
+    private bool clicked = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -17,10 +20,19 @@ public class FanAtk : MonoBehaviour
     }
     void OnMouseDown()
     {
-        if (FindObjectOfType<UIManager>().item.gameObject.name == "Metro Fan")
-        {
+        if (FindObjectOfType<UIManager>().item.gameObject.name == "Metro Fan" && clicked == false)
+        { 
+            clicked = true;
             FindObjectOfType<UIManager>().LightOut += 1;
-            Destroy(gameObject);
+            StartCoroutine(PlayForOneSecond());
         }
+    }
+    private IEnumerator PlayForOneSecond()
+    {
+        wind.Play();
+        yield return new WaitForSeconds(1f);
+        wind.Stop();
+        Destroy(gameObject);
+
     }
 }
