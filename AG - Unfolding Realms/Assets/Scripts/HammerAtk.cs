@@ -27,6 +27,7 @@ public class HammerAtk : MonoBehaviour
             Destroy(LtLamp);
             Cubey.SetActive(true);
             FindObjectOfType<UIManager>().LightOut += 1;
+            StartCoroutine(PlayForOneSecond());
         }
     }
     private IEnumerator PlayForOneSecond()

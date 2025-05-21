@@ -40,7 +40,7 @@ public class BlockSpawning : MonoBehaviour
         if(SceneManager.GetActiveScene().buildIndex == 5)
         {
             yield return new WaitForSeconds(5.0f);
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("RollingCredits");
         }
     }
 }
